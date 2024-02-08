@@ -1,0 +1,84 @@
+//Designing a calculator using c
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+
+
+int main() {
+   float a,b;
+   char ch;
+   float out1, out2;
+      out1 = sqrt(a);
+      out2 = sqrt(b);
+   
+
+  
+   while (1) {
+   printf(" Enter an operator :  (+,*,-,/,p,s,q,r)," //p=percentage, re= reminder, q= qube, r= square root
+          " Press x to exit : ");
+          scanf(" %c", &ch);
+   
+   // to exit the program
+   if( ch== 'x') {
+   exit(0);
+   }
+   else {
+   
+   //taking inputs
+   printf("Enter a value for A & B :  ");
+   scanf("%f %f", &a, &b);
+  
+
+   switch(ch) {
+
+    //addition
+    case '+' :
+      printf("The sum of a & b is : %f+%f= %f", a,b,a+b);
+      break;
+
+    //multiplication  
+    case '*' :
+      printf("The multiplication of a & b is : %f*%f=%f", a,b,a*b);
+      break;
+
+    //subtraction
+    case '-' :
+      printf("The subtraction of a & b is : %f-%f=%f", a,b,a-b);
+      break;
+
+    //division
+    case '/' :
+      printf("The division of a & b is : %f/%f=%f", a,b,a/b);
+      break;
+
+    //percentage
+    case 'p' :
+      printf("The %lf percentage of a is : %f*(%f/100)=%f", b,a,b,a*(b/100));
+      break;
+
+    //Square 
+    case 's' :
+      printf("The square of a & b are : %f & %f", a*a, b*b);
+      break;
+
+    //qube
+    case 'q' :
+      printf("The qube of a & b are : %f & %f", a*a*a, b*b*b);
+      break;
+
+    //square root
+    case 'r' :
+      printf("The square root of %f & %f are : %f & %f", a,b, out1,out2);
+      break;
+
+    //invalid operations
+    default: 
+     printf("Error!, this operator is invalid");
+
+    
+   }
+    printf("\n");
+   }
+   }
+ }   
